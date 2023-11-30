@@ -3,6 +3,7 @@ import { Redirect, Route, Switch, useRouteMatch } from 'react-router-dom';
 import ReservationForm from '../components/reservations/ReservationForm';
 import ReservationSearch from '../components/reservations/ReservationSearch';
 import ReservationSeat from '../components/reservations/ReservationSeat';
+import ReservationEdit from '../components/reservations/ReservationEdit';
 import TableCreate from '../components/tables/TableCreate';
 import Dashboard from '../dashboard/Dashboard';
 import { today } from '../utils/date-time';
@@ -55,7 +56,7 @@ function Routes() {
         <ReservationSeat />
       </Route>
       <Route exact path='/reservations/:reservation_id/edit'>
-        <ReservationForm date={date} isEditing={true} />
+        <ReservationEdit date={date} isEditing={true} />
       </Route>
 
       {/* <------------------------------------------ Table Routes -------------------------------------------> */}

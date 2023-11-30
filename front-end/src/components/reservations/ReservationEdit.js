@@ -7,7 +7,7 @@ import {
   updateReservation,
 } from '../../utils/api';
 
-function ReservationForm({ isEditing = false, date }) {
+function ReservationEdit({ isEditing = false, date }) {
   const history = useHistory();
 
   const { reservation_id } = useParams();
@@ -71,7 +71,7 @@ function ReservationForm({ isEditing = false, date }) {
 
   return (
     <>
-      <h1>{'Create A Reservation'}</h1>
+      <h1>{'Edit Reservation'}</h1>
       <ErrorAlert error={error} />
       <form onSubmit={handleSubmit} className='form-group'>
         <div className='row mb-4'>
@@ -181,4 +181,4 @@ function ReservationForm({ isEditing = false, date }) {
   );
 }
 
-export default ReservationForm;
+export default ReservationEdit;

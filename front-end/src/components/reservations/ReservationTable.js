@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import ErrorAlert from '../../layout/ErrorAlert';
 import { listTables, updateResStatus } from '../../utils/api';
 
@@ -52,18 +52,18 @@ function ReservationTable({ reservations }) {
         <td>
           <div>
             {reservation.status === 'booked' && (
-              <a href={`/reservations/${reservation.reservation_id}/seat`}>
+              <Link to={`/reservations/${reservation.reservation_id}/seat`}>
                 <button className='btn btn-primary'> Seat </button>
-              </a>
+              </Link>
             )}{' '}
           </div>
         </td>
         <td>
           <div>
             {reservation.status === 'booked' && (
-              <a href={`/reservations/${reservation.reservation_id}/edit`}>
+              <Link to={`/reservations/${reservation.reservation_id}/edit`}>
                 <button className='btn btn-primary '> Edit </button>
-              </a>
+              </Link>
             )}
           </div>
         </td>
