@@ -2,7 +2,7 @@
 
 Live Application: https://restaurant-reservation-front-y2bw.onrender.com
 
-### Summary
+## Summary
 
 > You have been hired as a full stack developer at _Periodic Tables_, a startup that is creating a reservation system for fine dining restaurants.
 > The software is used only by restaurant personnel when a customer calls to request a reservation.
@@ -10,20 +10,26 @@ Live Application: https://restaurant-reservation-front-y2bw.onrender.com
 
 This app will store reservations and tables at a restaurant. It defaults to a dashboard showing active reservations based on the reservation date, as well as available tables. The app allows the user to search for specific reservations, create new reservations, create new tables, and interact with the specific components of those reservations. Reservations can be seated, edited or cancelled, and tables can become occupied by reservations or remain free. This app allows restaurants to freely and easily track the status of their reservations and tables. 
 
-#### Screenshots of Funcationality
+### Screenshots of Funcationality
+
 Dashboard with reservations and tables
+
 ![Dashboard with reservations and tables](https://i.imgur.com/uc4aA0L.png)
 
 Creating a reservation
+
 ![Creating a reservation](https://i.imgur.com/befM3Vz.png)
 
 Creating a table
+
 ![Creating a table](https://i.imgur.com/SWPEN6a.png)
 
 Editing a reservation
+
 ![Editing a reservation](https://i.imgur.com/e8niCyd.png)
 
 Searching for a reservation
+
 ![Searching for a reservation](https://i.imgur.com/fai902A.png)
 
 
