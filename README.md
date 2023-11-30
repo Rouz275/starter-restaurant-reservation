@@ -10,7 +10,7 @@ Live Application: https://restaurant-reservation-front-y2bw.onrender.com
 
 This app will store reservations and tables at a restaurant. It defaults to a dashboard showing active reservations based on the reservation date, as well as available tables. The app allows the user to search for specific reservations, create new reservations, create new tables, and interact with the specific components of those reservations. Reservations can be seated, edited or cancelled, and tables can become occupied by reservations or remain free. This app allows restaurants to freely and easily track the status of their reservations and tables. 
 
-## Screenshots of Funcationality
+## Screenshots of Functionality 
 
 _Dashboard with reservations and tables_
 
