@@ -1,4 +1,12 @@
 .side-bar {
-  background-color: #393a44;
+  background-color: #001F3F;
   min-width: 200px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* For Tablets and Above --> Sidebar will take up the entire height */
+@media screen and (min-width: 768px) {
+  .side-bar {
+    min-height: 100svh;
+  }
 }

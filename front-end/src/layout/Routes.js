@@ -1,9 +1,13 @@
-import React from "react";
-
-import { Redirect, Route, Switch } from "react-router-dom";
-import Dashboard from "../dashboard/Dashboard";
-import NotFound from "./NotFound";
-import { today } from "../utils/date-time";
+import React, { useEffect, useState } from 'react';
+import { Redirect, Route, Switch, useRouteMatch } from 'react-router-dom';
+import ReservationForm from '../components/reservations/ReservationForm';
+import ReservationSearch from '../components/reservations/ReservationSearch';
+import ReservationSeat from '../components/reservations/ReservationSeat';
+import TableCreate from '../components/tables/TableCreate';
+import Dashboard from '../dashboard/Dashboard';
+import { today } from '../utils/date-time';
+import useQuery from '../utils/useQuery';
+import NotFound from './NotFound';
 
 /**
  * Defines all the routes for the application.
@@ -13,17 +17,64 @@ import { today } from "../utils/date-time";
  * @returns {JSX.Element}
  */
 function Routes() {
+  const [date, setDate] = useState(today());
+
+  const url = useRouteMatch();
+  const query = useQuery();
+
+  // Get Date
+  function getDate() {
+    const date = query.get('date');
+    if (date) {
+      setDate(date);
+    }
+  }
+
+  // GEt Date whenever URL/query changes
+  useEffect(getDate, [url, query]);
+
   return (
     <Switch>
-      <Route exact={true} path="/">
-        <Redirect to={"/dashboard"} />
+      {/* <--------------------------------------- Dashboard Route -----------------------------------------> */}
+      <Route path='/dashboard'>
+        <Dashboard date={date} />
       </Route>
-      <Route exact={true} path="/reservations">
-        <Redirect to={"/dashboard"} />
+
+      {/* <---------------------------------------- Reservation Routes -------------------------------------> */}
+
+      <Route exact path='/reservations'>
+        <Redirect to={'/dashboard'} />
       </Route>
-      <Route path="/dashboard">
-        <Dashboard date={today()} />
+      <Route exact path='/reservations/new'>
+        <ReservationForm date={date} />
       </Route>
+      <Route exact path='/search'>
+        <ReservationSearch />
+      </Route>
+      <Route exact path='/reservations/:reservation_id/seat'>
+        <ReservationSeat />
+      </Route>
+      <Route exact path='/reservations/:reservation_id/edit'>
+        <ReservationForm date={date} isEditing={true} />
+      </Route>
+
+      {/* <------------------------------------------ Table Routes -------------------------------------------> */}
+
+      <Route exact path='/tables'>
+        <Dashboard date={date} />
+      </Route>
+      <Route exact path='/tables/new'>
+        <TableCreate />
+      </Route>
+
+      {/* <-------------------------------------- Redirect '/' to Dashboard -----------------------------------> */}
+
+      <Route exact={true} path='/'>
+        <Redirect to={'/dashboard'} />
+      </Route>
+
+      {/* <---------------------------------------- Not Found Handler ----------------------------------------> */}
+
       <Route>
         <NotFound />
       </Route>
