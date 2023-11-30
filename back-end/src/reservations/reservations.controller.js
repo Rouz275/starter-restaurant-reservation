@@ -1,7 +1,7 @@
 const service = require('./reservations.service');
 const asyncErrorBoundary = require('../errors/asyncErrorBoundary');
 
-// <--------------------------- Reservation Validation Checkers (line 5-195) --------------------------->
+// Reservation Validation Checkers 
 
 function hasBody(req, res, next) {
   if (req.body.data) {

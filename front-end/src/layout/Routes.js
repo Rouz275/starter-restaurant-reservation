@@ -31,17 +31,17 @@ function Routes() {
     }
   }
 
-  // GEt Date whenever URL/query changes
+  // Get Date whenever URL/query changes
   useEffect(getDate, [url, query]);
 
   return (
     <Switch>
-      {/* <--------------------------------------- Dashboard Route -----------------------------------------> */}
+      {/* Dashboard Route */}
       <Route path='/dashboard'>
         <Dashboard date={date} />
       </Route>
 
-      {/* <---------------------------------------- Reservation Routes -------------------------------------> */}
+      {/* Reservation Routes */}
 
       <Route exact path='/reservations'>
         <Redirect to={'/dashboard'} />
@@ -59,7 +59,7 @@ function Routes() {
         <ReservationEdit date={date} isEditing={true} />
       </Route>
 
-      {/* <------------------------------------------ Table Routes -------------------------------------------> */}
+      {/* Table Routes */}
 
       <Route exact path='/tables'>
         <Dashboard date={date} />
@@ -68,13 +68,13 @@ function Routes() {
         <TableCreate />
       </Route>
 
-      {/* <-------------------------------------- Redirect '/' to Dashboard -----------------------------------> */}
+      {/* Redirect '/' to Dashboard */}
 
       <Route exact={true} path='/'>
         <Redirect to={'/dashboard'} />
       </Route>
 
-      {/* <---------------------------------------- Not Found Handler ----------------------------------------> */}
+      {/* Not Found Handler */}
 
       <Route>
         <NotFound />

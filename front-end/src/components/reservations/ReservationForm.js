@@ -44,7 +44,7 @@ function ReservationForm({ isEditing = false, date }) {
 
   const [error, setError] = useState(null);
 
-  // <------------------------- Form Handlers ----------------------->
+  // Form Handlers 
 
   const handleChange = ({ target }) => {
     const formData = isEditing ? currentReservation : reservation;

@@ -48,7 +48,7 @@ function ReservationSearch() {
       {reservations && reservations.length ? (
         <div>
           <h4 className='mb-4'> Search Results </h4>
-          <table className='table '>
+          <table className='table' style={{ color: 'white' }}>
             <thead>
               <th> ID </th>
               <th> First Name </th>

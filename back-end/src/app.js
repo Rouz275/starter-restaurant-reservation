@@ -10,24 +10,24 @@ const errorHandler = require('./errors/errorHandler');
 const reservationsRouter = require('./reservations/reservations.router');
 const tablesRouter = require('./tables/tables.router');
 
-// <------------------------------CORS -------------------------->
+// CORS 
 
 app.use(cors());
 
-// <---------------------- Body Parser -------------------------->
+// Body Parser 
 
 app.use(express.json());
 
-// <------------------------- Routes ---------------------------->
+// Routes
 
 app.use('/reservations', reservationsRouter);
 app.use('/tables', tablesRouter);
 
-// <----------------------- 404 Not Found ----------------------->
+// 404 Not Found 
 
 app.use(notFound);
 
-// <-------------------- Global Error Handler -------------------->
+// Global Error Handler 
 
 app.use(errorHandler);
 

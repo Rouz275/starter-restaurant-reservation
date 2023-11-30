@@ -1,7 +1,7 @@
 const service = require('./tables.service');
 const asyncErrorBoundary = require('../errors/asyncErrorBoundary');
 
-// <--------------------------- Tables Validation Checkers (line 5-158) --------------------------->
+// Tables Validation Checkers
 
 function hasDataProperty(req, res, next) {
   if (req.body.data) {
@@ -158,7 +158,7 @@ async function hasEnoughSeats(req, res, next) {
   return next();
 }
 
-// <--------------------------- Tables Controller functions --------------------------->
+// Tables Controller functions 
 async function list(req, res) {
   const data = await service.list();
   res.json({ data });

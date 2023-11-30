@@ -19,18 +19,6 @@ function TableCreate() {
     });
   };
 
-  // async function handleSubmit(event) {
-  //   event.preventDefault();
-  //   const pureTable = {
-  //     ...table,
-  //     capacity: Number(table.capacity),
-  //   };
-  //   await createTable(pureTable)
-  //       history.push(`/dashboard`);
-  //     })
-  //     .catch(setError);
-  // }
-
   async function handleSubmit(event) {
     event.preventDefault();
     const pureTable = {

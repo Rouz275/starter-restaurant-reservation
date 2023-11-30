@@ -2,7 +2,7 @@ const router = require('express').Router();
 const controller = require('./tables.controller');
 const methodNotAllowed = require('../errors/methodNotAllowed');
 
-// <--------------------------------------- Tables ROUTER ------------------------------------------->
+// Tables Router
 
 router
   .route('/:table_id([0-9]+)/seat') // Validation for ":table_id" params
