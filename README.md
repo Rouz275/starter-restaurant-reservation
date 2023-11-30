@@ -1,12 +1,37 @@
 # Capstone: Restaurant Reservation System
 
+Live Application: https://restaurant-reservation-front-y2bw.onrender.com
+
+## Summary
+
 > You have been hired as a full stack developer at _Periodic Tables_, a startup that is creating a reservation system for fine dining restaurants.
 > The software is used only by restaurant personnel when a customer calls to request a reservation.
 > At this point, the customers will not access the system online.
 
-There are no user stories for deployment: it is expected that you will deploy the application to production after you finish a user story.
+This app will store reservations and tables at a restaurant. It defaults to a dashboard showing active reservations based on the reservation date, as well as available tables. The app allows the user to search for specific reservations, create new reservations, create new tables, and interact with the specific components of those reservations. Reservations can be seated, edited or cancelled, and tables can become occupied by reservations or remain free. This app allows restaurants to freely and easily track the status of their reservations and tables. 
 
-There are no user stories for logging: it is expected that you will add logging to the application with enough detail to help you diagnose issues in production.
+## Screenshots of Functionality 
+
+_Dashboard with reservations and tables_
+
+![Dashboard with reservations and tables](https://i.imgur.com/uc4aA0L.png)
+
+_Creating a reservation_
+
+![Creating a reservation](https://i.imgur.com/befM3Vz.png)
+
+_Creating a table_
+
+![Creating a table](https://i.imgur.com/SWPEN6a.png)
+
+_Editing a reservation_
+
+![Editing a reservation](https://i.imgur.com/e8niCyd.png)
+
+_Searching for a reservation_
+
+![Searching for a reservation](https://i.imgur.com/fai902A.png)
+
 
 ## Existing files
 
